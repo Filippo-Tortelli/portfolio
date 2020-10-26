@@ -18,7 +18,7 @@ let amici = {
   },
   {
     name: "Alice",
-    status: "negative",
+    status: "positive",
   },
   {
     name: "Franza",
@@ -46,7 +46,7 @@ let amici = {
   },
   {
     name: "AnnaTonna",
-    status: "negative",
+    status: "positive",
   },
   {
     name: "Imelda",
@@ -89,6 +89,15 @@ function draw() {
   for(let i = 0; i < peopleInSpace.length; i++) {
     peopleInSpace[i].run();
   }
+
+  push()
+  var myText = "ROSSO = positivo   VERDE = negativo";
+  //textFont("Crimson Pro");
+  textAlign(CENTER);
+  textSize(40);
+  fill(255);
+  text(myText, width/2, height/2);
+  pop();
 }
 
 function addPeople(x, y, name, status) {
