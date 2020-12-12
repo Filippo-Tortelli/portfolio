@@ -58,7 +58,7 @@ let amici = {
   },
   {
     name: "Bocchi",
-    status: "negative",
+    status: "doubt",
   },
   ]
 }
@@ -104,6 +104,8 @@ function addPeople(x, y, name, status) {
   let bubbleColor;
   if (status == "negative") {
     bubbleColor = "green";
+  } else if (status == "doubt") {
+    bubbleColor = "gold";
   } else {
     bubbleColor = "tomato";
   }
