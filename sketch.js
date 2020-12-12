@@ -54,7 +54,7 @@ let amici = {
   },
   {
     name: "Lalla",
-    status: "negative",
+    status: "positive",
   },
   {
     name: "Bocchi",
