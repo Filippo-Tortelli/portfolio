@@ -25,7 +25,7 @@ body {
   border-radius: 8px;
   color: white;
   z-index: 1000;
-  padding: 10px 0;
+  padding: 0 9px;
 }
 
 .navbar ul {
@@ -34,7 +34,34 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  overflow: hidden;
+
+}
+
+.navbar li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 43px;
+  /* Aggiungi la transizione anche nello stato normale */
+  transition: transform 0.5s ease;
+}
+
+.navbar li:hover {
+  transform: translateY(-37px);
+}
+
+.navbar li div{
+  margin: 0;
+  padding: 15px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
 }
 
 p {
@@ -43,8 +70,13 @@ p {
   font-family: 'ABCROMMono', sans-serif;
   font-size: 15px;
   line-height: 120%;
-  letter-spacing: 2%;
+  letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.navbar p {
+  line-height: 90%;
+  letter-spacing: 1.5px;
 }
 
 #intro {
@@ -61,6 +93,18 @@ p {
   justify-content: center;
   gap: 12px;
 }
+
+#about {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+}
+
 
 .row {
   width: 100%;
@@ -130,7 +174,7 @@ p {
   align-items: flex-start;
   justify-content: flex-end;
   transform: translateY(60px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .card:hover .hoverlayer {
@@ -144,4 +188,8 @@ p {
     padding: 12px;
     width: -webkit-fill-available;
     color: white;
+}
+
+#about p {
+  width: 100%;
 }
