@@ -15,6 +15,28 @@ body {
   gap: 36px;
 }
 
+/* Navbar flottante */
+.navbar {
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 18px));
+  background-color: #1A1A1A;
+  border-radius: 8px;
+  color: white;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 p {
   margin: 0;
   padding: 0;
