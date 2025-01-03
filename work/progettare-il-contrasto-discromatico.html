@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="../index.html">
+          <div>
+          <p>Work</p>
+          <p>Work</p>
+          </div>
+        </a>
+        </li>
+        <li>
+        <a href="#about" class="smooth-scroll">
+          <div>
+          <p>About</p>
+          <p>About</p>
+          </div>
+        </a>
+        </li>
+        <li>
+        <a href="mail.html">
+          <div>
+          <p>Mail</p>
+          <p>Mail</p>
+          </div>
+        </a>
+        </li>
+      </ul>
+    </nav>
+
+<div class="description">
+    <p>The term “chromatic contrast” is assigned as soon as the difference between two or more compared colours is evident. Talking about accessibility during the design process, at the same time, means making sure that this evidence is guaranteed
+for all users as it has been intended, so that its communicative effectiveness remains unchanged even for people with dyschromatopsia, a condition that results in an altered and limited perception of colours. This thesis aims to describe, first of all, the reasons behind the use of colour in communication design. Colour is enticing and impactive, capable of drawing attention and driving user behaviour, and its use in wayfinding evidently points out this role of marker and guide. A feasible solution approach to the design of accessible colour contrast is subsequently introduced in two stages.</p>
+<p>In the first, simulation methods transform the colours of a digital image as they would appear to a person with one of the different types of dyschromatopsia, allowing the testing of its accessibility level and the intervention where there are inadequacies.</p>
+<p>Secondly, the theories of colour contrast, of which a historical reference framework is given, allow for a systematic approach to colour, when the degree of complexity of the design challenge grows, and ordinary intuition and experience cease to be exhaustive. Finally, a previous paradigm, developed according to the approach just outlined, is described: the redesign of colour combinations for signage in Seoul to make the contrast accessible for people with dyschromatopsia.</p>
+</div>
+
+<div class="credits">
+<p>(2023) Politecnico di Milano, Master Degree in Communication Design<br>Final thesis, supervisors: Salvatore Zingale, Dina Riccò</p>
+<p>link: <a href="https://www.politesi.polimi.it/handle/10589/212317">Politesi</a></p>
+</div>
+
+<div class="work-images">
+  <img src="../assets/images/contrastodiscromatico/contrastodiscromatico_02.jpg" alt="Descrizione immagine">
+  <img src="../assets/images/contrastodiscromatico/contrastodiscromatico_01.jpg" alt="Descrizione immagine">
+</div>
+  </body>
+</html>
+
+<script>
+document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Evita il comportamento predefinito del link
+
+        const targetId = this.getAttribute('href').split('#')[1]; // Ottieni l'ID dall'href
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop, // Posizione dell'elemento
+                behavior: 'smooth' // Scorrimento fluido
+            });
+        }
+    });
+});
+</script>

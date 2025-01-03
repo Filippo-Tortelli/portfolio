@@ -28,7 +28,19 @@ body {
   padding: 0 9px;
 }
 
-.navbar a {
+a {
+  margin: 0;
+  padding: 0;
+  font-family: 'ABCROMMono', sans-serif;
+  font-size: 15px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #B3B3B3;
+}
+
+#work a, .navbar a {
   color: white;
   text-decoration: none;
 }
@@ -244,6 +256,34 @@ h1 {
 
 #about p {
   width: 100%;
+}
+
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.description p:not(:first-of-type) {
+    text-indent: 36px;
+}
+
+.work-images {
+  margin: 0;
+  padding: 0;
+  gap: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.work-images img {
+  width: 100%;
+  border-radius: 8px;
 }
 
 /* Layout tablet: due colonne */
