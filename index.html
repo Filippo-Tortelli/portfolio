@@ -14,75 +14,117 @@
     <nav class="navbar">
       <ul>
         <li>
+          <a href="#work" class="smooth-scroll">
           <div>
           <p>Work</p>
           <p>Work</p>
           </div>
+        </a>
         </li>
         <li>
+        <a href="#about" class="smooth-scroll">
           <div>
           <p>About</p>
           <p>About</p>
           </div>
+        </a>
         </li>
         <li>
+        <a href="mail.html">
           <div>
           <p>Mail</p>
           <p>Mail</p>
           </div>
+        </a>
         </li>
       </ul>
     </nav>
 
     <p id="intro">Filippo Tortelli is a visual designer that Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-    <div id=work>
-
-      <div class="row">
-        <div class="card">
-          <div class="hoverlayer">
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
+    <div id=work class="grid-container">
 
         <div class="card">
           <div class="hoverlayer">
             <p>Lorem Ipsum</p>
           </div>
+          <img src="./assets/images/shutterstock_2454572545.jpg" alt="Descrizione immagine" class="media">
         </div>
-        <div class="card">
-          <div class="hoverlayer">
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
         <div class="card">
           <div class="hoverlayer">
             <p>Lorem Ipsum</p>
           </div>
+          <img src="./assets/images/shutterstock_2454572545.jpg" alt="Descrizione immagine" class="media">
         </div>
+
         <div class="card">
           <div class="hoverlayer">
             <p>Lorem Ipsum</p>
           </div>
+          <img src="./assets/images/shutterstock_2454572545.jpg" alt="Descrizione immagine" class="media">
         </div>
+
         <div class="card">
           <div class="hoverlayer">
             <p>Lorem Ipsum</p>
           </div>
+          <img src="./assets/images/shutterstock_2454572545.jpg" alt="Descrizione immagine" class="media">
         </div>
-      </div>
+
+        <div class="card">
+          <div class="hoverlayer">
+            <p>Lorem Ipsum</p>
+          </div>
+          <img src="./assets/images/shutterstock_2454572545.jpg" alt="Descrizione immagine" class="media">
+        </div>
 
     </div>
 
     <div id="about">
-      <div class="row">
+      <div class="grid-container">
         <p>Get in touch for job inquiries and more information.</p>
-        <p>Get in touch for job inquiries and more information.</p>
-        <p>Get in touch for job inquiries and more information.</p>
+        <p>filippo.tortel@gmail.com</p>
+        <div>
+          <p>instagram</p>
+          <p>linkedIn</p>
+        </div>
+      </div>
+
+      <div id="story" class="grid-container">
+        <div>
+          <p>Get in touch for job inquiries and more information.</p>
+          <p>ask for a cv? mail</p>
+        </div>
+        <div>
+          <h1>experiences</h1>
+          <p>Get in touch for job inquiries and more information.</p>
+          <p>Get in touch for job inquiries and more information.</p>
+        </div>
+        <div>
+          <h1>education</h1>
+          <p>Politecnico di Milano, MA Communication Design 2020—2023</p>
+          <p>Politecnico di Milano, MA Communication Design 2017—2020</p>
+        </div>
       </div>
     </div>
   </body>
 </html>
+
+<script>
+document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Evita il comportamento predefinito del link
+
+        const targetId = this.getAttribute('href').split('#')[1]; // Ottieni l'ID dall'href
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop, // Posizione dell'elemento
+                behavior: 'smooth' // Scorrimento fluido
+            });
+        }
+    });
+});
+</script>

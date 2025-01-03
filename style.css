@@ -28,6 +28,11 @@ body {
   padding: 0 9px;
 }
 
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
 .navbar ul {
   list-style-type: none;
   margin: 0;
@@ -80,23 +85,30 @@ p {
 }
 
 #intro {
-  width: 65%;
+  max-width: 960px;
 }
 
 #work {
   width: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: center; */
   gap: 12px;
+}
+
+.grid-container {
+    display: grid;
+    gap: 12px; /* Spaziatura tra le colonne e le righe */
+    grid-template-columns: repeat(3, 1fr);
 }
 
 #about {
   width: 100%;
   margin: 0;
+  margin-bottom: 240px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -105,6 +117,36 @@ p {
   gap: 12px;
 }
 
+#about .grid-container {
+  margin-bottom: 48px;
+}
+
+#story {
+  border-top: 1px solid #E6E6E6; /* Spessore, stile e colore del bordo */
+  padding-top: 12px;
+}
+
+#story div {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'ABCROMMono', sans-serif;
+  font-size: 15px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #B3B3B3;
+}
 
 .row {
   width: 100%;
@@ -120,11 +162,11 @@ p {
 /* Aggiungiamo l'animazione */
 @keyframes slideUp {
   from {
-    transform: translateY(40px);
+    /* transform: translateY(40px); */
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    /* transform: translateY(0); */
     opacity: 1;
   }
 }
@@ -132,23 +174,33 @@ p {
 /* Applichiamo l'animazione alle card */
 .card {
   aspect-ratio: 4 / 5;
-  background-color: red;
+  position: relative;
+  background-color: LightGRAY;
   width: 100%;
   border-radius: 8px;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  transform: translateY(20px); /* Posizione iniziale coerente con l'animazione */
+  /* transform: translateY(20px); /* Posizione iniziale coerente con l'animazione */
   opacity: 0; /* Invisibile all'inizio */
-  animation: slideUp 0.8s ease-out forwards;
+  animation: slideUp 0.5s ease-out forwards;
 
   /* Imposta un'immagine di sfondo */
-  background-image: url('./assets/images/shutterstock_2454572545.jpg'); /* Percorso dell'immagine */
+  /* background-image: url('./assets/images/shutterstock_2454572545.jpg'); */
   background-size: cover; /* Assicura che l'immagine riempia l'intera card */
   background-position: center; /* Centra l'immagine */
   background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
 }
 
+.media {
+  position: absolute; /* Posiziona l'immagine o il video all'interno della card */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assicura che l'immagine o il video riempia la card */
+  z-index: -1; /* Posiziona l'immagine/video sotto altri contenuti */
+}
 
 /* Aggiungiamo un piccolo ritardo per ogni card in base all'ordine */
 .card:nth-child(1) {
@@ -193,3 +245,17 @@ p {
 #about p {
   width: 100%;
 }
+
+/* Layout tablet: due colonne */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Layout mobile: una colonna */
+        @media (max-width: 767px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
